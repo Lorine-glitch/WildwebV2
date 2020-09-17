@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>wildweb</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  * Tog */
+
+.tog{
+    width: 20px;
+    position: fixed;
+    z-index: 1;
+    right: 10px;
+    top: 20%;
+}
+
+/* tog-items */
+.tog-items{
+    height: 60px;
+    width: 8px;
+    background: rgba(0, 128, 0, 0.589);
+    transition: 0.5s ease;
+}
+
+.tog-items:hover{
+    background-color: green;
+    width: 10px;
+}
+
+/* Logo */
+
+.logo{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+}
+
+/* logo image */
+.logo-img{
+    height: 60px;
+}
+
+/* Navigation */
+
+.nav-main{
+    background-color: green;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 55px;
+}
+
+.nav-custom{
+    padding-left: 35%;
+}
+
+.item-custom{
+    padding-right: 20px;
+}
+
+/* Banner */
+.banner{
+    height: 850px;
+    position: relative;
+    top: 58px;
+    margin-bottom: 80px;
+    background-image: url(../images/animal2.jpg);
+    background-size: cover;
+}
+.top-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.offer-img{
+    width: 120px;
+    position: absolute;
+    bottom: 350px;
+    right: 40px;
+}
+
+.off-20{
+    width: 120px;
+    position: absolute;
+    bottom: 200px;
+    right: 40px;
+    animation-name: off-20;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes off-20{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.welcome{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    bottom: 200px;
+    left: -48%;
+    animation-name: karibu;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes karibu{
+    0%{left: -48%;}
+    50%{left: 35%; opacity: 1;}
+    70%{left: -48%;}
+    100%{opacity: 0;}
+}
+.footer-cont{
+    height: auto;
+    background-color: green;
+    padding-bottom: 0;
+}
+
+.Locate{
+    color: white;
+}
+
+.footer-col a{
+    color: white;
+    text-decoration: none;
+}
+
+.map-cont{
+    width: 100%;
+    height: 100%;
+}
+
+.map{
+    width: 100%;
+    height: 200px;
+}
+</style>
+<body>
+  <div class="container-fluid logo">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<img src="images/wildlogo.png" alt="logo" class="logo-img">
+			</div>
+		</div>
+	</div>
+    <div>
+		<nav class="navbar navbar-expand-sm bg-warning navbar-light">
+			<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#">Book</a>
+				th:href="@{getbookingForm}">Book</a></li>
+				</li>
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{getRegistartionForm}">Register</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Login</a></li>
+				th:href="@{getLoginForm}">Login</a></li>
+				 
+			</ul>
+		</nav>
+	</div>
+    
+  
+</body>
+</html>
