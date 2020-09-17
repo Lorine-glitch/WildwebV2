@@ -1,1 +1,1 @@
-This projects deals with wild booking
+This projects deals with wild booking for tourists
